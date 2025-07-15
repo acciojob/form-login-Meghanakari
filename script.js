@@ -3,5 +3,5 @@ function getFormvalue(event) {
     let fname = document.querySelector('input[name="fname"]').value.trim();
     let lname = document.querySelector('input[name="lname"]').value.trim();
     let fullName = fname + ' ' + lname;
-    alert(fullName);
-}
+    console.log(alert(fullName));
+	
