@@ -1,5 +1,4 @@
-function getFormValue(event) {
-    const form = document.getElementById('login-form');
+const form = document.getElementById('login-form');
 
 function getFormValue(event) {
     event.preventDefault();
