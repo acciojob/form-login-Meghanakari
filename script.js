@@ -1,20 +1,16 @@
 function getFormValue(event) {
-    event.preventDefault(); 
-    let firstName = document.getElementById('fname');
-    let lastName = document.getElementById('lname');
+    const form = document.getElementById('login-form');
 
-    // Check if elements exist
-    if (!firstName || !lastName) {
-        console.error("Input fields not found");
-        return;
-    }
-
-    let firstNameValue = firstName.value.trim();
-    let lastNameValue = lastName.value.trim();
-
-    if (firstNameValue && lastNameValue) {
-        alert(`${firstNameValue} ${lastNameValue}`);
+function getFormValue(event) {
+    event.preventDefault();
+    const fname = document.querySelector('input[name="fname"]').value.trim();
+    const lname = document.querySelector('input[name="lname"]').value.trim();
+    if (fname && lname) {
+        const fullName = `${fname} ${lname}`;
+        alert(fullName);
     } else {
-        alert("Please enter both first name and last name.");
+        alert("Please fill out both fields.");
     }
 }
+
+form.addEventListener('submit', getFormValue);
